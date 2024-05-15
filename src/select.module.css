@@ -1,0 +1,120 @@
+.container {
+    outline: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 20em;
+    min-height: 1.5em;
+    margin-bottom: 20px;
+    padding: .5em .25em;
+    border: .05em solid #777;
+    border-radius: .25em;
+}
+
+.container:focus {
+    border-color: aqua;
+}
+
+.value {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 0 .5em;
+}
+
+.clear-btn {
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5em;
+    color: #777;
+}
+
+.clear-btn:hover,
+.clear-btn:focus {
+    color: red;
+}
+
+.divider {
+    align-self: stretch;
+    width: 0.5em;
+    border-left: 1px solid #777;
+}
+
+.caret {
+    translate: 0 25%;
+    cursor: pointer;
+    border: .25em solid transparent;
+    border-top-color: #777;
+    font-size: 1.5em;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: calc(100% + .25em);
+    left: 0;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+    padding: .5em 0em;
+    background-color: white;
+    border: 1px solid #777;
+    border-radius: .25em;
+    list-style-type: none;
+}
+
+.option {
+    padding: .5em;
+}
+
+.selected {
+    background-color: rgb(114, 162, 218);
+}
+
+.option:hover {
+    background-color: lightblue;
+}
+
+.highlighted {
+    background-color: lightblue;
+}
+
+.show {
+    display: block;
+}
+
+.remove-btn {
+    padding-left: 5px;
+}
+
+.multiple {
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    margin: 3px;
+    padding: .15em .25em;
+    background: none;
+    cursor: pointer;
+    border: .05em solid #777;
+    border-radius: .25em;
+}
+
+.multiple:hover,
+.multiple:focus {
+    background-color: hsl(0, 100%, 90%);
+    border-color: hsl(0, 100%, 50%);
+}
+
+.multiple:hover>.remove-btn,
+.multiple:focus>.remove-btn {
+    color: hsl(0, 100%, 50%);
+}
+
+.multiple:hover>.remove-btn {
+    font-size: 1.5em;
+    color: #777;
+}
